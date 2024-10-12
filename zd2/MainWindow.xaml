@@ -1,0 +1,23 @@
+﻿<Window x:Class="zd2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zd2"
+        mc:Ignorable="d"
+        Title="Text Editor" Height="450" Width="800">
+    <DockPanel Background="#FFCCCCCC">
+        <!-- Меню -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" Click="OpenFile_Click"/>
+                <MenuItem Header="Сохранить" Click="SaveFile_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Текстовое поле для редактирования текста -->
+        <TextBox x:Name="EditorTextBox" AcceptsReturn="True" AcceptsTab="True" 
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                 FontSize="14" TextWrapping="Wrap"/>
+    </DockPanel>
+</Window>

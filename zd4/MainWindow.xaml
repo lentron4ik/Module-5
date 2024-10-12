@@ -1,0 +1,22 @@
+﻿<Window x:Class="zd4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Image Viewer" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Name="btnOpen" Click="btnOpen_Click" Content="Открыть изображение" Margin="5"/>
+            <TextBlock Name="txtImagePath" VerticalAlignment="Center" Margin="5"/>
+            <Slider Name="sliderZoom" Minimum="0.1" Maximum="5" Value="1" TickFrequency="0.1" Width="200" Margin="5" ValueChanged="sliderZoom_ValueChanged"/>
+            <TextBlock Text="Масштаб" VerticalAlignment="Center" Margin="5"/>
+        </StackPanel>
+
+        <ScrollViewer Name="scrollViewer" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Image Name="imageControl" Stretch="Uniform"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
